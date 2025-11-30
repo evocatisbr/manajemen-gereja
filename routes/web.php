@@ -25,7 +25,7 @@ Route::middleware(['auth'])->group(function () {
 
 // Dashboard khusus ADMIN
 Route::middleware(['auth', 'role:admin'])->group(function () {
-    Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard');
 });
 
 // Admin only
